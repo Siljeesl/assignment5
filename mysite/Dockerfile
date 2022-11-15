@@ -2,9 +2,11 @@ FROM python:3.11-rc-bullseye
 
 ENV PYTHONUNBUFFERED 1
 
+RUN pip3 install --upgrade pip
+
 WORKDIR /mysite
 
-COPY requirements.txt requirements.txt
+COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 COPY . .
