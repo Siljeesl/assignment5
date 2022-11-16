@@ -8,7 +8,7 @@ WORKDIR /mysite
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-COPY . .
+COPY INFO212-MAIN/mysite .
 
 RUN python3 manage.py makemigrations mysite
 RUN python3 manage.py migrate 
